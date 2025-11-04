@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="lib/jquery-3.7.1.min.js"></script>
     <script src="lib/common.js"></script>
+    <script>
+
+        /* 푸터 html 불러오기 */
+        $(function () {
+            $('#all-footer').load('footer.html');
+        });
+    </script>
 </head>
 
 <body>
@@ -70,6 +77,18 @@
             </div><!-- .right-icon end -->
         </div><!-- .inner end -->
     </section><!-- #header end -->
+
+    <section id="main-visual">
+        <div class="inner">
+            <ul class="list">
+                <li><a href="#"><img src="img/mainvisual1.jpg" alt="메인비주얼1"></a></li>
+                <li><a href="#"><img src="img/mainvisual2.jpg" alt="메인비주얼2"></a></li>
+                <li><a href="#"><img src="img/mainvisual3.jpg" alt="메인비주얼3"></a></li>
+            </ul><!-- .list end -->
+        </div><!-- .inner end -->
+    </section><!-- #main-visual end -->
+
+    <div id="all-footer"></div>
 </body>
 
 </html>

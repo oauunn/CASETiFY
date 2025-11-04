@@ -1,15 +1,15 @@
 @charset "utf-8";
 @import url('reset.css');
+@import url('layout.css');
 
-#header {}
-
-#header .top-banner {
+#banner {
     background-color: #FB5B48;
     width: 100%;
     height: 40px;
+    margin-bottom: 30px;
 }
 
-#header .top-banner .text {
+#banner .text {
     margin: 0 auto;
     display: flex;
     width: 600px;
@@ -21,10 +21,10 @@
     font-family: 'Source Code Pro';
 }
 
-#header .top-banner .text p > a {
+#banner .text p > a {
     color: #777777;
     text-decoration: underline;
 }
-#header .top-banner .text img {
+#banner .text img {
     display: block;
 }

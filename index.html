@@ -7,31 +7,9 @@
     <title>CASETiFY</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lib/common.js"></script>
+
     <script>
-
-        $(function () {
-
-            // 메뉴 버튼 클릭 시 토글
-            $('.menu-btn').on('click', function (e) {
-                e.stopPropagation(); // 이벤트 전파 방지
-                $('.menu-nav').toggleClass('active');
-                $('body').toggleClass('active');
-            });
-
-            // 문서 전체 클릭 시
-            $(document).on('click', function (e) {
-                // 메뉴가 열려 있고, 클릭한 곳이 메뉴 내부나 버튼이 아닐 때 닫기
-                if (
-                    $('.menu-nav').hasClass('active') &&
-                    !$(e.target).closest('.menu-nav, .menu-btn').length
-                ) {
-                    $('.menu-nav').removeClass('active');
-                    $('body').removeClass('active');
-                }
-            });
-
-        });
-
         $(function () {
             // 화면에서 마우스 움직일 때 실행
             // .cursor가 x, y축으로 따라 움직임
@@ -60,6 +38,7 @@
 
         });//script end
     </script>
+    
 </head>
 
 <body>

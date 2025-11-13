@@ -20,7 +20,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    background-color: aqua;
 }
 #footer .inner .right-box .top {}
 #footer .inner .right-box .top .text {
@@ -30,7 +29,6 @@
     font-family: 'Lato';
     font-size: 12px;
     line-height: 2;
-    background-color: #FB5B48;
 }
 #footer .inner .right-box .top .text li {}
 #footer .inner .right-box .icon {

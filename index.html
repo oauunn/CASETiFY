@@ -18,12 +18,13 @@
     <header class="site-header">
         <!-- Global Header -->
         <div class="header-left">
-            <button id="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="main-navigation">
+            <button id="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-drawer">
                 <img src="img/icon-menu.png" alt="">
             </button>
             <a href="index.html"><img src="img/casetify-logo-15th.png" width="120" alt="CASETiFY"></a>
         </div><!-- .header-left end -->
 
+        <!-- Desktop Primary Navigation -->
         <nav id="main-navigation" class="gnb" aria-label="주요 메뉴">
             <ul class="gnb-list">
 
@@ -73,7 +74,7 @@
                 </li><!-- .gnb-item end -->
 
                 <li class="gnb-item">
-                    <a href="https://www.casetify.com/ko_KR/featured-colabs/current">Co-Lab</a>
+                    <a href="colab.html">Co-Lab</a>
 
 
                     <div class="gnb-dropdown">
@@ -94,17 +95,8 @@
 
                             <div class="gnb-group">
                                 <p class="gnb-group-title">카테고리별 보기</p>
-                                <p class="gnb-group-note">V1에서는 전체 Co-Lab 목록으로 연결됩니다.</p><!-- .gnb-group-title end -->
-
                                 <ul>
-                                    <li><a href="https://www.casetify.com/ko_KR/featured-colabs/current">애니메이션 & 만화</a></li>
-                                    <li><a href="https://www.casetify.com/ko_KR/featured-colabs/current">캐릭터 & 카툰</a></li>
-                                    <li><a href="https://www.casetify.com/ko_KR/featured-colabs/current">K-Pop</a></li>
-                                    <li><a href="https://www.casetify.com/ko_KR/featured-colabs/current">패션 & 라이프스타일</a></li>
-                                    <li><a href="https://www.casetify.com/ko_KR/featured-colabs/current">아트 & 뮤지엄</a></li>
-                                    <li><a href="https://www.casetify.com/ko_KR/featured-colabs/current">영화 & 엔터테인먼트</a></li>
-                                    <li><a href="https://www.casetify.com/ko_KR/featured-colabs/current">스포츠</a></li>
-                                    <li><a href="https://www.casetify.com/ko_KR/featured-colabs/current" class="gnb-link-more">전체 카테고리 보기</a></li>
+                                    <li><a href="colab.html#current-colab">카테고리 필터로 둘러보기</a></li>
                                 </ul>
                             </div><!-- .gnb-group end -->
 
@@ -165,7 +157,240 @@
         </div><!-- .header-right end -->
     </header><!-- .site-header end -->
 
+    <div id="site-drawer" class="site-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+        <div class="drawer-backdrop" aria-hidden="true"></div><!-- .drawer-backdrop end -->
 
+        <div class="site-drawer-panel">
+
+            <h2 id="drawer-title" class="sr-only">전체 메뉴</h2>
+
+            <!-- Drawer Header -->
+            <div class="drawer-header">
+                <button class="drawer-close" type="button" aria-label="메뉴 닫기">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div><!-- .drawer-header end -->
+
+            <!-- Compact / Mobile only (Desktop GNB가 사라지는 1009px 이하에서만 노출) -->
+            <nav class="drawer-primary" aria-label="대표 메뉴" hidden>
+                <ul>
+                    <li>
+                        <a href="https://www.casetify.com/phone-cases?DG=Phones">Phone Cases</a>
+                    </li>
+
+                    <li>
+                        <a href="colab.html">Co-Lab</a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.casetify.com/casetify-customization">Custom</a>
+                    </li>
+                </ul>
+            </nav><!-- .drawer-primary end -->
+
+            <!-- Device Navigation Utility -->
+            <section class="drawer-device" aria-labelledby="drawer-device-title">
+                <div class="drawer-device-heading">
+                    <h3 id="drawer-device-title">기종 별로 살펴보기</h3>
+
+                    <button class="device-toggle" type="button" aria-expanded="false"
+                        aria-controls="drawer-device-panel">
+                        <span>기종 선택</span>
+                        <span class="device-toggle-icon" aria-hidden="true">▾</span>
+                    </button><!-- .device-toggle end -->
+                </div><!-- .drawer-device-heading end -->
+
+                <div id="drawer-device-panel" class="drawer-device-panel" hidden>
+                    <div class="device-group">
+                        <h4>Apple</h4>
+
+                        <ul>
+                            <li>
+                                <a href="https://www.casetify.com/iphone-cases/iphone-18-pro-max-cases">iPhone 18 Pro
+                                    Max</a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.casetify.com/iphone-cases/iphone-18-pro-cases">iPhone 18 Pro</a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.casetify.com/iphone-cases/iphone-duo-cases">iPhone Duo</a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.casetify.com/iphone-cases/iphone-17-pro-max-cases">iPhone 17 Pro
+                                    Max</a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.casetify.com/iphone-cases/iphone-17-pro-cases">iPhone 17 Pro</a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.casetify.com/iphone-cases/iphone-air-cases">iPhone Air</a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.casetify.com/iphone-cases/iphone-17-cases">iPhone 17</a>
+                            </li>
+                        </ul>
+                    </div><!-- .drawer-group end -->
+
+                    <div class="device-group">
+                        <h4>Samsung</h4>
+
+                        <ul>
+                            <li>
+                                <a href="https://www.casetify.com/samsung/galaxy-s26-ultra-cases">Galaxy S26 Ultra</a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.casetify.com/samsung/galaxy-s26-cases">Galaxy S26</a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.casetify.com/samsung/galaxy-s26-plus-cases">Galaxy S26+</a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.casetify.com/samsung/galaxy-z-flip8-cases">Galaxy Z Flip 8</a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.casetify.com/samsung/galaxy-z-fold8-ultra-cases">Galaxy Z Fold 8
+                                    Ultra</a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.casetify.com/samsung/galaxy-z-fold8-cases">Galaxy Z Fold 8</a>
+                            </li>
+                        </ul>
+                    </div><!-- .device-group end -->
+
+                    <a class="device-all-link" href="https://www.casetify.com/phone-cases?DG=Phones">전체 기종 보기 →</a>
+                </div><!-- .drawer-device-panel end -->
+            </section><!-- .drawer-device end -->
+
+            <!-- Drawer Navigation -->
+            <nav class="drawer-navigation" aria-label="전체 메뉴">
+
+                <!-- Design -->
+                <section class="drawer-group drawer-group--design">
+                    <h3>Design</h3>
+
+                    <ul class="drawer-design-list">
+                        <li>
+                            <a href="https://www.casetify.com/collection/featured-prints">컬렉션</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/artists?AG=Artist">아티스트 컬렉션</a>
+                        </li>
+                    </ul><!-- .drawer-design-list end -->
+                </section><!-- .drawer-group drawer-group--design end -->
+
+                <!-- All Products -->
+                <section class="drawer-group drawer-group--products">
+                    <h3>All Products</h3>
+
+                    <ul class="drawer-product-list">
+                        <li>
+                            <a href="https://www.casetify.com/series/snappy-series">맥세이프 액세서리</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/series/straps-and-charms-series">폰 스트랩</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/series/carabiner-and-charm-keychain-series">참</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/earbuds?DG=Earbuds">무선 이어폰 케이스</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/watch?DG=Watch">워치밴드 & 케이스</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/ipad-cases?DG=iPad">태블릿 케이스</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/macbook-cases?DG=MacBook">랩탑 케이스</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/series/protectors-series">액정 / 렌즈 보호 필름</a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://www.casetify.com/gadgets/powerthru-2-in-1-charging-stand?DG=Accessories&D_Accessories=PowerThru+2-in-1+Charging+Stand">충전기
+                                & 케이블</a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://www.casetify.com/gadgets/canvas-tote-bag?DG=Accessories&D_Accessories=Canvas+Tote+Bag">라이프스타일
+                                제품</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/collection/casetify-travel">여행</a>
+                        </li>
+                    </ul><!-- .drawer-proudct-list end -->
+                </section><!-- .drawer-group drawer-group--products end -->
+
+                <!-- Explore -->
+                <section class="drawer-group drawer-group--explore">
+                    <h3>Explore</h3>
+
+                    <ul>
+                        <li>
+                            <a href="https://www.casetify.com/collection/best-selling-prints">베스트셀러 디자인</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/sets-and-bundles/all-sets">번들</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/chase-card-by-casetify">케이스티파이 체이스 카드</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/gift-card">기프트 카드</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/visit-us">매장 방문하기</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/about-us">브랜드 소개</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/casetify-club">CASETiFY Club</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/about-us/how-its-made">#TheCASETiFYStandard</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.casetify.com/about-us/sustainability/strategy">#TheCASETiFYSustainability</a>
+                        </li>
+                    </ul>
+                </section><!-- .drawer-group drawer-group--explore end -->
+
+            </nav><!-- .drawer-navigation end -->
+        </div><!-- .site-drawer-panel end -->
+    </div><!-- .site-drawer end -->
 
     <main id="main-content" tabindex="-1">
         <h1 class="sr-only">CASETiFY</h1>
@@ -222,7 +447,7 @@
                         <a class="hero-slide-link" href="https://www.casetify.com/case-type/ultra-impact-case">
 
                             <div class="campaign-image">
-                                <img src="img/UltraImpactCase.png" alt="">
+                                <img src="img/optimized/UltraImpactCase.webp" alt="">
                             </div><!-- .campaign-image end -->
 
                             <div class="campaign-content">
@@ -335,7 +560,7 @@
             <ul class="product-list">
                 <li class="product-card">
                     <a href="https://www.casetify.com/ko_KR/product/jelly-wristlet#16011238" class="product-card-link">
-                        <img src="img/JellyWristlet-Flower.png" alt="">
+                        <img src="img/optimized/JellyWristlet-Flower-480.webp" alt="">
                         <h3>Jelly Wristlet - Flower</h3>
                         <p>₩32,000</p>
                     </a><!-- .product-card-link end -->
@@ -351,7 +576,7 @@
                 </li><!-- .product-card end -->
 
                 <li class="product-card">
-                    <a href="https://www.casetify.com/product/phone-case-customization/iphone-17/magsafe-compatible-impact-case?color=white#/16009381"
+                    <a href="https://www.casetify.com/product/phone-case-customization/iphone-17/magsafe-compatible-impact-case#/16009381"
                         class="product-card-link">
                         <img src="img/CustomPhoneCase.webp" alt="">
                         <h3>Custom Phone Case</h3>
@@ -393,7 +618,7 @@
                 <li class="product-card">
                     <a href="https://www.casetify.com/ko_KR/product/berry-sweet-phone-case/iphone-17/impact-ring-stand-case-magsafe-compatible#/16009399"
                         class="product-card-link">
-                        <img src="img/BerrySweet.png" alt="">
+                        <img src="img/BerrySweet.webp" alt="">
                         <h3>Berry sweet</h3>
                         <p>₩115,000</p>
                     </a><!-- .product-card-link end -->
@@ -547,7 +772,7 @@
                     <li>
                         <a href="https://www.casetify.com/ko_KR/product/pink-eyes-phone-cases/iphone-17/magsafe-compatible-impact-case#/16009380"
                             aria-label="Pink Eyes 상품 보기">
-                            <img src="img/community-PinkEyes.png" alt="">
+                            <img src="img/optimized/community-PinkEyes.webp" alt="">
                             <span class="community-cta" aria-hidden="true">
                                 구매하기 →
                             </span>
@@ -709,7 +934,7 @@
                         (언제든지 수신을 취소할 수 있습니다.)
                     </span>
                 </label><!-- .newsletter-consent end -->
-            <p id="newsletter-status" class="form-status" role="status"></p>
+                <p id="newsletter-status" class="form-status" role="status"></p>
             </form><!-- .newsletter-form end -->
         </section><!-- .newsletter end -->
 
@@ -764,7 +989,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/casetify" aria-label="CASETiFY Twitter">
+                            <a href="https://x.com/casetify" aria-label="CASETiFY X (Twitter)">
                                 <img src="img/x.png" alt="">
                             </a>
                         </li>
@@ -792,7 +1017,8 @@
 
             <nav class="footer-nav" aria-label="푸터 메뉴">
                 <div class="footer-nav-group">
-                    <h2><button class="footer-toggle" type="button" aria-expanded="true" aria-controls="footer-panel-1" disabled>서비스 & 혜택<span aria-hidden="true">+</span></button></h2>
+                    <h2><button class="footer-toggle" type="button" aria-expanded="true" aria-controls="footer-panel-1"
+                            disabled>서비스 & 혜택<span aria-hidden="true">+</span></button></h2>
                     <ul id="footer-panel-1">
                         <li><a href="https://www.casetify.com/casetify-club">CASETiFY Club</a></li>
                         <li><a href="https://www.casetify.com/auth">케이스티파이 정품 인증</a></li>
@@ -803,7 +1029,8 @@
                 </div><!-- .footer-nav-group end -->
 
                 <div class="footer-nav-group">
-                    <h2><button class="footer-toggle" type="button" aria-expanded="true" aria-controls="footer-panel-2" disabled>기기<span aria-hidden="true">+</span></button></h2>
+                    <h2><button class="footer-toggle" type="button" aria-expanded="true" aria-controls="footer-panel-2"
+                            disabled>기기<span aria-hidden="true">+</span></button></h2>
                     <ul id="footer-panel-2">
                         <li><a href="https://www.casetify.com/iphone-cases?DG=iPhone">Apple</a></li>
                         <li><a
@@ -815,7 +1042,8 @@
                 </div><!-- .footer-nav-group end -->
 
                 <div class="footer-nav-group">
-                    <h2><button class="footer-toggle" type="button" aria-expanded="true" aria-controls="footer-panel-3" disabled>About CASETiFY<span aria-hidden="true">+</span></button></h2>
+                    <h2><button class="footer-toggle" type="button" aria-expanded="true" aria-controls="footer-panel-3"
+                            disabled>About CASETiFY<span aria-hidden="true">+</span></button></h2>
                     <ul id="footer-panel-3">
                         <li><a href="https://www.casetify.com/about-us">브랜드 소개</a></li>
                         <li><a href="https://www.casetify.com/about-us/how-its-made">THE CASETiFY Standard</a></li>
@@ -828,14 +1056,15 @@
                 </div><!-- .footer-nav-group end -->
 
                 <div class="footer-nav-group">
-                    <h2><button class="footer-toggle" type="button" aria-expanded="true" aria-controls="footer-panel-4" disabled>고객 지원<span aria-hidden="true">+</span></button></h2>
+                    <h2><button class="footer-toggle" type="button" aria-expanded="true" aria-controls="footer-panel-4"
+                            disabled>고객 지원<span aria-hidden="true">+</span></button></h2>
                     <ul id="footer-panel-4">
                         <li><a href="https://www.casetify.com/faq">FAQ</a></li>
-                        <li><a href="https://www.casetify.com/faq/shipping">배송 안내</a></li>
-                        <li><a href="https://www.casetify.com/faq/return">반품 및 교환</a></li>
+                        <li><a href="https://www.casetify.com/faq/topic/shipping">배송 안내</a></li>
+                        <li><a href="https://www.casetify.com/faq/topic/return">반품 및 교환</a></li>
                         <li><a href="https://www.casetify.com/support/customer-satisfaction-guarantee">제품 보증</a></li>
                         <li><a href="https://www.casetify.com/user/orders">주문 현황</a></li>
-                        <li><a href="https://www.casetify.com/contact">문의하기</a></li>
+                        <li><a href="https://www.casetify.com/faq/contact">문의하기</a></li>
                     </ul>
                 </div><!-- .footer-nav-group end -->
             </nav><!-- .footer-nav end -->
@@ -849,27 +1078,28 @@
             </button>
 
             <div class="footer-company">
-            <h2 class="company-heading"><button class="footer-toggle" type="button" aria-expanded="true" aria-controls="company-panel" disabled>사업자 정보<span aria-hidden="true">+</span></button></h2>
-            <ul class="company-information" id="company-panel">
-                <li>케이스티파이 : 케이스타그램 리미티드(Casetify: Casetagram Limited)
-                    <span class="text-separator" aria-hidden="true">|</span>
-                    케이스티파이 유한회사 (CASETiFY)
-                    <span class="text-separator" aria-hidden="true">|</span>
-                    대표: 응푸이순 웨슬리 (Wesley Ng)
-                </li>
-                <li>사업자등록번호: 580-88-02026
-                    <span class="text-separator" aria-hidden="true">|</span>
-                    통신판매업 신고번호: 제 2021-서울강남-03049 호
-                    <span class="text-separator" aria-hidden="true">|</span>
-                    주소: 서울 강남구 영동대로 616 아남빌딩 2층, 케이스티파이
-                </li>
-                <li>
-                    <a href="mailto:hello@casetify.com">CS Center: hello@casetify.com</a> / <a
-                        href="tel:18336292">1833-6292</a>
-                    <span class="text-separator" aria-hidden="true">|</span>
-                    휴무: 토요일, 일요일, 공휴일 휴무
-                </li>
-            </ul><!-- .information end -->
+                <h2 class="company-heading"><button class="footer-toggle" type="button" aria-expanded="true"
+                        aria-controls="company-panel" disabled>사업자 정보<span aria-hidden="true">+</span></button></h2>
+                <ul class="company-information" id="company-panel">
+                    <li>케이스티파이 : 케이스타그램 리미티드(Casetify: Casetagram Limited)
+                        <span class="text-separator" aria-hidden="true">|</span>
+                        케이스티파이 유한회사 (CASETiFY)
+                        <span class="text-separator" aria-hidden="true">|</span>
+                        대표: 응푸이순 웨슬리 (Wesley Ng)
+                    </li>
+                    <li>사업자등록번호: 580-88-02026
+                        <span class="text-separator" aria-hidden="true">|</span>
+                        통신판매업 신고번호: 제 2021-서울강남-03049 호
+                        <span class="text-separator" aria-hidden="true">|</span>
+                        주소: 서울 강남구 영동대로 616 아남빌딩 2층, 케이스티파이
+                    </li>
+                    <li>
+                        <a href="mailto:hello@casetify.com">CS Center: hello@casetify.com</a> / <a
+                            href="tel:18336292">1833-6292</a>
+                        <span class="text-separator" aria-hidden="true">|</span>
+                        휴무: 토요일, 일요일, 공휴일 휴무
+                    </li>
+                </ul><!-- .information end -->
             </div>
 
             <div class="footer-legal">
@@ -892,7 +1122,9 @@
     </footer><!-- .site-footer end -->
 
     <dialog class="utility-dialog" aria-labelledby="utility-title">
-        <div class="dialog-heading"><h2 id="utility-title"></h2><button type="button" class="dialog-close" aria-label="닫기">×</button></div>
+        <div class="dialog-heading">
+            <h2 id="utility-title"></h2><button type="button" class="dialog-close" aria-label="닫기">×</button>
+        </div>
         <div id="utility-content"></div>
     </dialog>
     <script src="js/responsive.js"></script>

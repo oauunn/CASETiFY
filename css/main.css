@@ -710,6 +710,17 @@
     text-align: center;
 }
 
+.purchase-text {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+}
+
+/* Safari balance can split the review count at its comma. */
+.purchase-text p {
+    text-wrap: wrap;
+}
+
 .purchase-support li+li {
     border-inline-start: 1px solid #eaeaea;
 }

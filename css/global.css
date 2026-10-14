@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /* Global Header */
-
 .site-header {
     position: relative;
     z-index: 100;
@@ -453,17 +452,38 @@ body.drawer-open {
     display: flex;
     align-items: flex-start;
 
-    min-height: 100px;
+    min-height: 120px;
 
     padding: 16px;
 
     border: 1px solid #dddddd;
     border-radius: 20px;
 
-    background-color: #ffffff;
+    background-image: var(--drawer-design-image, none);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     font-size: 14px;
     font-weight: 700;
+}
+
+.drawer-design-card--featured {
+    --drawer-design-image: url("../img/drawer-featured-prints.jpeg");
+}
+
+.drawer-design-card--artists {
+    --drawer-design-image: url("../img/drawer-artists.jpeg");
+}
+
+.drawer-design-list a:hover {
+    border-color: #111111;
+    box-shadow: inset 0 0 0 1px #111111;
+}
+
+.site-drawer .drawer-design-list a:focus-visible {
+    outline: 2px solid #111111;
+    outline-offset: 3px;
 }
 
 
@@ -474,6 +494,10 @@ body.drawer-open {
 
 .drawer-product-list li {
     border-bottom: 1px solid #eeeeee;
+}
+
+.drawer-product-list li:last-child {
+    border: none;
 }
 
 .drawer-product-list a {
@@ -505,20 +529,11 @@ body.drawer-open {
     font-weight: 400;
 }
 
-
-/*
-    White Drawer에서는 currentColor가 orange로 변해도
-    focus outline은 black으로 고정한다.
-*/
 .site-drawer a:focus-visible,
 .site-drawer button:focus-visible {
     outline-color: #111111;
 }
 
-/*
-    Black GNB에서는 focus ring을 white로 유지.
-    기존 currentColor 기반 orange outline 방지.
-*/
 .gnb-item>a:focus-visible {
     outline-color: #ffffff;
 }
@@ -531,8 +546,8 @@ body.drawer-open {
         display: none;
     }
 
-    .site-drawer-panel {
-        width: 100%;
+    .drawer-design-list {
+        max-width: 392px;
     }
 }
 
@@ -1039,10 +1054,6 @@ body.drawer-open {
 
     .gnb {
         display: none;
-    }
-
-    .site-drawer-panel {
-        width: 100%;
     }
 }
 
